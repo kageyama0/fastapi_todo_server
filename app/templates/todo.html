@@ -1,0 +1,23 @@
+<html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <title>Todos</title>
+  </head>
+  <body>
+    <h1>fastapiで作った。localhost:8001のページです〜</h1>
+    <table border="1">
+      <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>done</th>
+      </tr>
+      {% for todo in todos %}
+        <tr>
+          <th>{{todo.id}}</th>
+          <th>{{todo.title}}</th>
+          <th>{{todo.done}}</th>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

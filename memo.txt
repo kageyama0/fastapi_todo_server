@@ -1,0 +1,22 @@
+curl -X POST "http://localhost:8000/todos/" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"hoge\",\"done\":true}"
+
+curl -X POST "http://localhost:8001/todos/" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"人間失格を読む\",\"done\":true}"
+
+curl -X POST "http://localhost:8001/todos/" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"坊ちゃんを読む\",\"done\":1}"
+
+curl -X POST "http://localhost:8001/todos/" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"洗濯\",\"done\":false}"
+
+docker build -t myimage .
+
+docker run -d --name mycontainer -p 80:80 myimage
+
+docker stop mycontainer
+
+docker rm mycontainer
+
+docker logs mycontainer
+
+    # l = len(todos)
+    # for i in range(l):
+    #     t = todos[i]
+    #     yield t.id, t.title, t.done
