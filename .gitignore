@@ -1,2 +1,2 @@
-__pycache__
-test.db
+app/__pycache__/
+app/test.db
